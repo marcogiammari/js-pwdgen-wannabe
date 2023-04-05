@@ -15,9 +15,10 @@ function pwgen() {
             document.getElementById("pw").style.backgroundColor = "red";
             break
         case "BLU":
-            document.getElementById("pw").style.backgroundColor = "blue";
+            document.getElementById("pw").style.backgroundColor = "lightblue";
             break
         case "VERDE":
             document.getElementById("pw").style.backgroundColor = "green";
+            break;
     }
 }
