@@ -9,16 +9,47 @@ function pwgen() {
     colore = colore.toUpperCase();
     switch(colore) {
         case "GIALLO":
-            document.getElementById("pw").style.backgroundColor = "yellow";
+            document.querySelector("body").style.backgroundColor = "khaki";
             break
         case "ROSSO":
-            document.getElementById("pw").style.backgroundColor = "red";
+            document.querySelector("body").style.backgroundColor = "crimson";
             break
         case "BLU":
-            document.getElementById("pw").style.backgroundColor = "lightblue";
+            document.querySelector("body").style.backgroundColor = "lightskyblue";
             break
         case "VERDE":
-            document.getElementById("pw").style.backgroundColor = "green";
+            document.querySelector("body").style.backgroundColor = "mediumseagreen";
+            break;
+        case "ROSA":
+            document.querySelector("body").style.backgroundColor = "lightpink";
+            break;
+        case "ARANCIONE":
+            document.querySelector("body").style.backgroundColor = "coral";
+            break;
+        case "VIOLA":
+            document.querySelector("body").style.backgroundColor = "mediumpurple";
             break;
     }
 }
+
+
+function random(){
+    let password = document.getElementById("pw").innerText;
+    if (password == "") {
+        pwgen();
+        random();
+    }
+    else {
+        var shuffledWord = '';
+        word = document.getElementById("pw").innerHTML;
+        word = word.split('');
+        while (word.length > 0) {
+        shuffledWord +=  word.splice(word.length * Math.random() << 0, 1);
+        }
+        document.getElementById("randompw").innerHTML = shuffledWord;        
+    }
+
+    
+}
+
+
